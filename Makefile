@@ -1,5 +1,6 @@
 .PHONY: test deps
 
+
 deps:
 	pip install -r requirements.txt; \
 	pip install -r test_requirements.txt
@@ -22,3 +23,11 @@ docker_run: docker_build
 	   --name hello-world-printer-dev \
 	   -p 5000:5000 \
 	   -d hello-world-printer
+
+USERNAME=kamilgral
+TAG=$(USERNAME) /hello-world-printer
+docker_push:
+		docker login --username $(USERNAME) --password $(PASSWORD)  ; \
+		docker tag hello-world-printer $(TAG); \
+		docker push $(TAG); \
+		docker logout;
