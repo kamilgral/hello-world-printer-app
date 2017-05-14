@@ -13,4 +13,4 @@ after_success:
 deploy:
   provider: heroku
   app: fathomless-sea-19990
-  api_key: 5faebe89-2671-4ada-8d33-6ba05ca84246
+  api_key: $Heroku_key
