@@ -1,6 +1,6 @@
 **/*.pyc
-.test_results.xml
-.coverage.xml
-
 .cache
+test_results.xml
+coverage.xml
 .*.swp
+.coverage
