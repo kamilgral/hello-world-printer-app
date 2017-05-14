@@ -1,2 +1,6 @@
 **/*.pyc
+.test_results.xml
+.coverage.xml
+
 .cache
+.*.swp
