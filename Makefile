@@ -19,7 +19,7 @@ test_cov:
 	PYTHONPATH=. py.test --verbose --cov=.
 
 test_xunit:
-	PYTHONPATH=. py.test --verbose --cov=. --cov-report xml --junit-xml=test_results.xml
+	PYTHONPATH=. py.test -s --cov=. --cov-report xml --junit-xml=test_results.xml
 
 
 docker_build:
